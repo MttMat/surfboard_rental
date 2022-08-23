@@ -23,12 +23,13 @@ puts 'Creating 20 fake users and boards...'
     material_type:    ["Epoxy", "Polyester", "100% Carbon", "Polystyrene", "Fiberglass"].sample,
     brand:    ["South Bay Board Co", "Wave Bandit", "Wavestorm", "BIC Sport", "Thurso Surf"].sample,
     price:    rand(0..1000).round(2),
+    description: "This is a very beautiful surfboard!",
     shape:    ["Longboard", "Shortboard", "Fish", "Egg", "Hybrid", "Funboard"].sample,
     lenght:   rand(6.0..9.0).round(1),
     address:  Faker::Address.full_address,
     user_id:  user.id,
-  )
-  surfboard.save!
+    )
+    surfboard.save!
 
 end
 puts "Creating 10 rentals..."
