@@ -1,39 +1,62 @@
 // Specific CSS for your home-page
-.navbar-surfturf {
-  justify-content: space-between;
-  background: #28587b;
-  height: 100%;
+h1{
+  font-family: 'Edu TAS Beginner', cursive;
 }
 
-.navbar-surfturf .navbar-collapse {
-  flex-grow: 0;
+.banner {
+  padding-top: 100px;
+  padding-left: 25px;
+  height: 500px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-image: url(https://images.unsplash.com/photo-1621433213916-fde39d28e016?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-size: contain;
 }
 
-.navbar-surfturf .navbar-brand img {
-  width: 40px;
+h2 {
+  text-align: center;
 }
 
-.search-form-control {
-  position: relative;
+h3 {
+  font-size: 24px;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    size: 50px;
 }
 
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+div {
+  display: block;
 }
 
-.search-form-control .form-control {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+.cards {
+  padding-top: 50px;
+  background-position: center;
+  display: grid;
+  grid-gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24px;
+  color: #01041D;
+  font-weight: lighter;
+  background-size: cover;
+  // height: 150px;
+  // border-radius: 1px;
+  // box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  // text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+
+.cards-container .cards {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+img {
+  size: 100px;
+}
+
+.btn {
+  background-color: #28587B;
   border-radius: 50px;
-  box-shadow: #E7E7E7;
-}
-
-.search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
+  }
