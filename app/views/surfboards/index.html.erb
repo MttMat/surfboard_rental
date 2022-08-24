@@ -1,4 +1,33 @@
-<h1>Available surfboards</h1>
+<div class="container">
+    <h1>Your search results</h1>
+  <div class="display_surfboards">
+    <%@surfboards.each do |surfboard|%>
+    <div class="surfboard">
+    <%= link_to surfboard_path(surfboard.id) do %>
+      <img src="https://cdn.shopify.com/s/files/1/0280/0235/3239/products/what-top_03a2b77c-f2e4-4e47-83b7-54a7d0a28c3d_1600x.jpg?v=1648664678">
+      <div class="surfboard-infos">
+        <div>
+          <h2><%=surfboard.brand%></h2>
+          <p><%=surfboard.description%></p>
+        </div>
+        <h2 class="surfboard-pricing">$<%=surfboard.price%></h2>
+      </div>
+      <%end%>
+    </div>
+    <%end%>
+  </div>
+</div>
+
+<!--
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+
 <ul>
   <% @surfboards.each do |surfboard| %>
     <li><%= surfboard.price %></li>
@@ -9,3 +38,4 @@
     <li><%= surfboard.address %></li>
   <% end %>
 </ul>
+-->
