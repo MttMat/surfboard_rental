@@ -6,5 +6,6 @@ class SurfboardsController < ApplicationController
 
   def show
     @surfboard = Surfboard.find(params[:id])
+    @rental = Rental.new
   end
 end
