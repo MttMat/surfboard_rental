@@ -3,24 +3,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @surfboards = Surfboard.all
-  end
-
-  def index
-    @surfboards = Surfboard.all
+    @surfboards = Surfboard.limit(3)
   end
 
   def dashboard
     @rentals = Rental.where(user: current_user)
   end
-
-#   def new
-#     @surfboard = Surfboard.new
-#   end
-
-#   private
-
-#   def set_surfboard
-#     @surfboard = Surfboard.find(params[:id])
-#   end
 end

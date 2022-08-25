@@ -3,7 +3,8 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.user = current_user
     @rental.booking_status = "pending"
-    @rental.surfboard = Surfboard.find(params[:surfboard_id])
+    @surfboard = Surfboard.find(params[:surfboard_id])
+    @rental.surfboard = @surfboard
     if @rental.save
       redirect_to dashboard_path, notice: 'Booking made.'
     else
