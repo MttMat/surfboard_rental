@@ -1,0 +1,18 @@
+.container {
+  margin: auto;
+  padding: 3px;
+}
+
+button {
+  border-radius: 50px;
+  color: rgb(131, 173, 235);
+}
+
+.img-thumbnail {
+  padding: -0.75rem;
+  background-color: #F4F4F4;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 2px;
+  max-width: 15%;
+  height: 10%;
+}

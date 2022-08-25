@@ -9,4 +9,18 @@ class PagesController < ApplicationController
   def index
     @surfboards = Surfboard.all
   end
+
+  def dashboard
+    @surfboards = Surfboard.new
+  end
+
+  def new
+    @surfboard = Surfboard.new
+  end
+
+  private
+
+  def set_surfboard
+    @surfboard = Surfboard.find(params[:id])
+  end
 end
