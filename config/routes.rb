@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :surfboards do
     resources :rentals, only: [:create]
   end
-  resources :users
   get "/dashboard", to: "pages#dashboard"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
