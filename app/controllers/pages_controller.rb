@@ -11,16 +11,16 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @surfboards = Surfboard.new
+    @rentals = Rental.where(user: current_user)
   end
 
-  def new
-    @surfboard = Surfboard.new
-  end
+#   def new
+#     @surfboard = Surfboard.new
+#   end
 
-  private
+#   private
 
-  def set_surfboard
-    @surfboard = Surfboard.find(params[:id])
-  end
+#   def set_surfboard
+#     @surfboard = Surfboard.find(params[:id])
+#   end
 end
