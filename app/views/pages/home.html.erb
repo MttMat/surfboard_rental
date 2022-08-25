@@ -31,16 +31,20 @@
 <div class="container">
   <h2 class="mt-5" >Check out Our Surfboards</h1>
 
-  <div class="cards-container">
+  <div class="display_surfboards">
     <% @surfboards.each do |surfboard| %>
-      <div class="cards">
-        <img src="https://i.pinimg.com/564x/9a/31/bf/9a31bf514fa9c45d35889fd997b93550.jpg" alt="">
-          <%= link_to surfboard.brand, surfboards_path %>
-          <br>
-          <%= surfboard.price %>
-          <br>
-          <%= surfboard.description %>
+      <div class="surfboard">
+    <%= link_to surfboard_path(surfboard.id) do %>
+      <img src="https://cdn.shopify.com/s/files/1/0280/0235/3239/products/what-top_03a2b77c-f2e4-4e47-83b7-54a7d0a28c3d_1600x.jpg?v=1648664678">
+      <div class="surfboard-infos">
+        <div>
+          <h2><%=surfboard.brand%></h2>
+          <p><%=surfboard.description%></p>
         </div>
+        <h2 class="surfboard-pricing">$<%=surfboard.price%></h2>
+      </div>
+      <%end%>
+    </div>
     <% end %>
   </div>
 </div>
