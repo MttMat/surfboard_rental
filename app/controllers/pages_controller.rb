@@ -3,19 +3,11 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @surfboards = Surfboard.all
-  end
-
-  def index
-    @surfboards = Surfboard.all
+    @surfboards = Surfboard.limit(3)
   end
 
   def dashboard
     @surfboards = Surfboard.new
-  end
-
-  def new
-    @surfboard = Surfboard.new
   end
 
   private
