@@ -8,7 +8,7 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to dashboard_path, notice: 'Booking made.'
     else
-      render 'surfboards/show'
+      render 'surfboards/show', status: :unprocessable_entity
     end
   end
 

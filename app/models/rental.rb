@@ -13,5 +13,12 @@ class Rental < ApplicationRecord
     if return_date < starting_date
       errors.add(:return_date, "must be after the start date")
     end
- end
+
+    if starting_date < Date.today
+      errors.add(:starting_date, "must be either today or after today")
+    end
+    if return_date < Date.today
+      errors.add(:return_date, "must be either today or after today")
+    end
+  end
 end
