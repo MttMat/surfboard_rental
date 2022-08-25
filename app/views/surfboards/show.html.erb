@@ -1,7 +1,7 @@
 <div class="page-container">
   <div class="container">
 
-  <h1><%= @surfboard.brand %></h1>
+    <h1><%= @surfboard.brand %></h1>
 
     <div class="images active">
       <img class="hero-image" src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3570&q=80" alt="First slide">
@@ -14,34 +14,37 @@
 
 
 
-  <div class="description-booking">
-    <div class="description">
-      <div class="text-description">
-        <h2>Description</h2>
-        <p><strong>Price:</strong> <%= @surfboard.price %></p>
-        <p><strong>Material type:</strong> <%= @surfboard.material_type %></p>
-        <p><strong>Shape:</strong> <%= @surfboard.shape %></p>
-        <p><strong>Length:</strong> <%= @surfboard.lenght %> m</p>
-        <p><strong>Located at:</strong> <%= @surfboard.address %></p>
+    <div class="description-booking">
+      <div class="description">
+        <div class="text-description">
+          <h2>Description</h2>
+          <p><strong>Price:</strong> <%= @surfboard.price %></p>
+          <p><strong>Material type:</strong> <%= @surfboard.material_type %></p>
+          <p><strong>Shape:</strong> <%= @surfboard.shape %></p>
+          <p><strong>Length:</strong> <%= @surfboard.lenght %> m</p>
+          <p><strong>Located at:</strong> <%= @surfboard.address %></p>
 
-        <p><strong>Description:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
-
-    <div class="booking-form">
-      <h2>Start date</h2>
-      <div class="input-group mb-4">
-        <i class="bi bi-calendar-date input-group-text"></i>
-        <input type="date" class="datepicker_input form-control" placeholder="Pick a date" required aria-label="Date input 3 (using aria-label)" required>
-      </div>
-
-      <h2>Return date</h2>
-        <div class="form-floating input-group mb-4">
-          <i class="bi bi-calendar-date input-group-text"></i>
-          <input type="date" id="datepicker2" class="datepicker_input form-control" placeholder="DD/MM/YYYY" required>
+          <p><strong>Description:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
+      </div>
+
       <div>
-        <button>Book now</button>
+        <%= simple_form_for [@surfboard, @rental] do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+          <div class="form-inputs">
+            <%= f.input :starting_date, as: :date, html5: true %>
+          </div>
+
+          <div class="form-inputs">
+            <%= f.input :return_date, as: :date, html5: true %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, class: "btn btn-primary" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
