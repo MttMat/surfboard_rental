@@ -14,13 +14,7 @@ class PagesController < ApplicationController
     @rentals = Rental.where(user: current_user)
   end
 
-#   def new
-#     @surfboard = Surfboard.new
-#   end
-
-#   private
-
-#   def set_surfboard
-#     @surfboard = Surfboard.find(params[:id])
-#   end
+  def renter
+    @rentals = Rental.where(user: current_user)
+  end
 end
