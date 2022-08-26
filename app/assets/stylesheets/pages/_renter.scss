@@ -1,3 +1,10 @@
+.h3-name {
+  font-size: 20px;
+  text-align: left;
+  padding-top: 5px;
+  margin-left: 75px;
+}
+
 .card-confirmation {
 
   .btn-accept {
@@ -20,7 +27,7 @@
   display: grid;
 }
 
-.card-product {
+.card-product-confirmation {
   overflow: hidden;
   height: 120px;
   background: white;
@@ -30,4 +37,11 @@
   margin-top: 10px;
   align-content: center;
   margin-right: 250px;
+  justify-content: space-between;
+
+  img {
+  width: 120px;
+  object-fit: fit;
+  margin-left: 0px;
+  };
 }

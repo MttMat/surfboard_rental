@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/dashboard", to: "pages#dashboard"
   get "/renter", to: "pages#renter"
   patch "/rentals/:id/accept", to: "rentals#accept_status", as: "acceptance"
-  patch "/rentals/:id/reject", to: "rental#reject_status", as: "rejection"
+  patch "/rentals/:id/reject", to: "rentals#reject_status", as: "rejection"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
