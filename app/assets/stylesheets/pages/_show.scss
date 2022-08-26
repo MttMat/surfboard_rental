@@ -29,8 +29,6 @@
   }
 }
 
-
-
 .description-booking {
   display: flex;
   justify-content: space-between;
@@ -38,7 +36,7 @@
 }
 
 .description {
-  max-width: 990px;
+  max-width: 90%;
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
@@ -49,14 +47,14 @@
   text-align: left;
 }
 
-.show-h2 {
-  font-size: 1.5rem;
+.date-input {
+  font-size: large;
   font-weight: bold;
   text-align: left;
 }
 
 .booking-form {
-  max-width: 60%;
+  max-width: 300px;
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
@@ -67,6 +65,17 @@
 
 }
 
-.button {
+.btn-create-rental {
+  background-color: #28587B;
   border-radius: 50px;
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  .btn-create-rental:hover {
+    background-color: #1c3749;
+    color: white;
+  }
 }
