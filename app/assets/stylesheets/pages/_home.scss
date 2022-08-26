@@ -13,18 +13,19 @@
   align-items: center;
 }
 
-.home-h1 {
+.h1 {
   font-family: 'Edu TAS Beginner', cursive;
   margin-top: 145px;
 }
 
-.home-h2 {
+.h2 {
   margin-bottom: 30px;
 }
 
-.home-h3 {
+h3 {
   font-size: 24px;
 }
+
 .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,10 +47,6 @@ div {
   color: #01041D;
   font-weight: lighter;
   background-size: cover;
-  // height: 150px;
-  // border-radius: 1px;
-  // box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-  // text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 }
 
 .cards-container .cards {

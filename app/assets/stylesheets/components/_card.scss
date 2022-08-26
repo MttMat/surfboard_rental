@@ -21,6 +21,7 @@ $white: #f7f8fa;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
       width: 350px;
       border-radius: 10px;
+      transition: 0.5s ease;
 
       &:hover {
         box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -35,7 +36,7 @@ $white: #f7f8fa;
 
 
 
-      .h2 {
+      .h3-brand, .surfboard-pricing {
         font-size: 24px;
         font-weight: bold;
         margin: 0;
@@ -74,43 +75,3 @@ $white: #f7f8fa;
     }
   }
 }
-
-
-
-
-
-
-
-// .card-product {
-//   overflow: hidden;
-//   height: 200px;
-//   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   display: flex;
-//   align-items: center;
-
-//   img {
-//     height: 100%;
-//     width: 200px;
-//     object-fit: cover;
-//   }
-
-//   h2 {
-//     font-size: 16px;
-//     font-weight: bold;
-//     margin: 0;
-//   }
-
-//   p {
-//     font-size: 12px;
-//     line-height: 1.4;
-//     opacity: .7;
-//     margin-bottom: 0;
-//     margin-top: 8px;
-//   }
-// }
-
-
-// .card-product .card-product-infos {
-//   padding: 16px;
-// }
