@@ -29,8 +29,6 @@
   }
 }
 
-
-
 .description-booking {
   display: flex;
   justify-content: space-between;
@@ -64,6 +62,17 @@
 
 }
 
-.button {
+.btn-create-rental {
+  background-color: #28587B;
   border-radius: 50px;
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  .btn-create-rental:hover {
+    background-color: #1c3749;
+    color: white;
+  }
 }

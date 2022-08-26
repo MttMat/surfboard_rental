@@ -34,14 +34,13 @@
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
           <div class="form-inputs">
-
-            <h3><%= f.input :starting_date, as: :date, html5: true, required: false%></h3>
+            <h3 class="date-input"><%= f.input :starting_date, as: :date, html5: true %></h3>
           </div>
           <div class="form-inputs">
-            <h3><%= f.input :return_date, as: :date, html5: true, required: false%></h3>
+            <h3 class="date-input"><%= f.input :return_date, as: :date, html5: true %></h3>
           </div>
           <div class="form-actions">
-            <%= f.button :submit, class: "button" %>
+            <%= f.button :submit, class: "btn-create-rental" %>
           </div>
         <% end %>
       </div>
