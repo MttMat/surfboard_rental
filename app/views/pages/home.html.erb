@@ -1,3 +1,4 @@
+
   <div class="banner">
   <div class="banner-text"></div>
     <h1 class="home-h1"> Welcome to SurfTurf</h1>
@@ -29,23 +30,21 @@
 
 
 <div class="container">
-
-
   <h2 class="home-h2" >Some of our best surfboards</h2>
   <div class="display_surfboards">
     <% @surfboards.each do |surfboard| %>
       <div class="surfboard">
-    <%= link_to surfboard_path(surfboard.id) do %>
-      <img src="https://cdn.shopify.com/s/files/1/0280/0235/3239/products/what-top_03a2b77c-f2e4-4e47-83b7-54a7d0a28c3d_1600x.jpg?v=1648664678">
-      <div class="surfboard-infos">
-        <div>
-          <h2 class="home-h2"><%=surfboard.brand%></h2>
-          <p><%=surfboard.description%></p>
+      <%= link_to surfboard_path(surfboard.id) do %>
+        <img src="https://cdn.shopify.com/s/files/1/0280/0235/3239/products/what-top_03a2b77c-f2e4-4e47-83b7-54a7d0a28c3d_1600x.jpg?v=1648664678">
+        <div class="surfboard-infos">
+          <div>
+            <h3 class="h3-brand"><%=surfboard.brand%></h3>
+            <p><%=surfboard.description%></p>
+          </div>
+          <h3 class="surfboard-pricing">$<%=surfboard.price%></h3>
         </div>
-        <h2 class="surfboard-pricing">$<%=surfboard.price%></h2>
-      </div>
       <%end%>
-    </div>
+      </div>
     <% end %>
   </div>
 </div>
