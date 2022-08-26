@@ -13,4 +13,21 @@ class SurfboardsController < ApplicationController
     @surfboard = Surfboard.find(params[:id])
     @rental = Rental.new
   end
+
+  def new
+    @surfboard = Surfboard.new
+  end
+
+  def create
+    @surfboard = Surfboard.new(surfboard_params)
+    @surfboard.user = current_user
+    @surfboard.save
+    redirect_to  surfboards_index_path
+  end
+
+
+  private
+  def surfboard_params
+    params.require(:surfboard).permit(:description, :brand, :material_type, :shape, :lenght, :address, :price)
+  end
 end

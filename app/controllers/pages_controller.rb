@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def dashboard
     @rentals = Rental.where(user: current_user)
   end
+
+  def renter
+    @rentals = Rental.where(user: current_user)
+  end
 end

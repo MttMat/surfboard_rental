@@ -1,0 +1,33 @@
+.card-confirmation {
+
+  .btn-accept {
+    background-color: white;
+    border-color: white;
+    width: 65px;
+    height: 53px;
+
+  }
+  .btn-reject {
+    background-color: white;
+    border-color: white;
+    width: 65px;
+    height: 50px;
+
+  }
+}
+
+.d-flex {
+  display: grid;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  align-content: center;
+  margin-right: 250px;
+}
