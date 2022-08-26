@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :surfboards do
     resources :rentals, only: [:create]
   end
-  resources :users
   get "/dashboard", to: "pages#dashboard"
   get "/renter", to: "pages#renter"
   patch "/rentals/:id/accept", to: "rentals#accept_status", as: "acceptance"
