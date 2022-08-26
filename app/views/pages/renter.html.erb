@@ -4,43 +4,44 @@
     <div class="col-3">
       <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" class="img-profile" alt="">
         <br>
-        <h3>Julian Wan</h3>
-        <button>Edit Profile</button>
+        <h3 class="h3-name">Julian Wan</h3>
+        <button class="button">Edit Profile</button>
         <br>
-        <button>Current Booking</button>
+        <button class="button">Current Booking</button>
         <br>
-        <button>Past Booking</button>
+        <button class="button">Past Booking</button>
         <br>
-        <button>Add Surfboard</button>
+        <button class="button">Add Surfboard</button>
     </div>
-    <div class="col-6">
+    <div class="col-9">
       <div class="cards-dashboard">
       <% @rentals.each do |rental| %>
-        <%= link_to surfboard_path(rental.surfboard) do %>
-          <div class="card-product">
-              <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" class="card-img-top" alt="...">
-              <div class="card-product-infos">
-                  <h2><%= rental.surfboard.brand  %></h2>
-                  <p><%= rental.surfboard.price %></p>
-                  <p><%= rental.booking_status %></p>
-              </div>
-    </div>
-    <div class="col-3">
-              <div class="d-flex">
-                <div class="card-confirmation">
-                <%= link_to acceptance_path(rental), data: {turbo_method: :patch} do %>
-                  <img src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Checkmark-512.png" class="btn btn-accept" alt="">
-                <% end %>
-                <br>
-                <%= link_to rejection_path(rental), method: :patch do %>
-                  <img src="https://cdn3.iconfinder.com/data/icons/security-and-protection/512/access_denied_stop_forbidden_flat_icon-512.png" class = "btn btn-reject" alt="">
-                <% end %>
-                </div>
-              </div>
+        <div class="card-product-confirmation">
+          <%= link_to surfboard_path(rental.surfboard), class:"d-flex" do %>
+            <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" class="card-img-renter" alt="...">
+            <div class="card-product-infos">
+                <h2 class="show-h2"><%= rental.surfboard.brand  %></h2>
+                <p class="text-description"><%= rental.surfboard.price %></p>
+                <p class="text-description"><%= rental.booking_status %></p>
+            </div>
+          <% end %>
+          <div class="d-flex">
+            <div class="card-confirmation">
+            <%= link_to acceptance_path(rental), data: {turbo_method: :patch} do %>
+              <img src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Checkmark-512.png" class="btn btn-accept" alt="">
+            <% end %>
+            <br>
+            <%= link_to rejection_path(rental), data: {turbo_method: :patch} do %>
+              <img src="https://cdn3.iconfinder.com/data/icons/security-and-protection/512/access_denied_stop_forbidden_flat_icon-512.png" class = "btn btn-reject" alt="">
+            <% end %>
+            </div>
           </div>
-        <% end %>
+        </div>
       <% end %>
       </div>
     </div>
+
+
+
   </div>
 </div>

@@ -13,7 +13,19 @@ class RentalsController < ApplicationController
   end
 
   def accept_status
+    @rental = Rental.find(params[:id])
+    @rental.booking_status = "accepted"
+    if @rental.save
+      redirect_to renter_path
+    end
+  end
 
+  def reject_status
+    @rental = Rental.find(params[:id])
+    @rental.booking_status = "rejected"
+    if @rental.save
+      redirect_to renter_path
+    end
   end
 
   private

@@ -1,3 +1,10 @@
+.h3-name {
+  font-size: 20px;
+  text-align: left;
+  padding-top: 5px;
+  margin-left: 75px;
+}
+
 .card-confirmation {
 
   .btn-accept {
@@ -20,14 +27,21 @@
   display: grid;
 }
 
-// .card-product {
-//   overflow: hidden;
-//   height: 120px;
-//   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   display: flex;
-//   align-items: center;
-//   margin-top: 10px;
-//   align-content: center;
-//   margin-right: 250px;
-// }
+.card-product-confirmation {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  align-content: center;
+  margin-right: 250px;
+  justify-content: space-between;
+
+  img {
+  width: 120px;
+  object-fit: fit;
+  margin-left: 0px;
+  };
+}
