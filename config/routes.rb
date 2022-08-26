@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :rentals, only: [:create]
   end
   get "/dashboard", to: "pages#dashboard"
+  get "/renter", to: "pages#renter"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
