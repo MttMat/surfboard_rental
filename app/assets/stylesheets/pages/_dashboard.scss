@@ -32,6 +32,20 @@
   font-size: 16px;
 }
 
+.btn-renter {
+  border-radius: 50px;
+  width: 200px;
+  color: rgb(231, 234, 239);
+  background-color: #28587B;
+  border: #28587B;
+  font-size: 16px;
+  padding: 4px 11px 4px 11px;
+}
+
+.btn-renter:hover {
+  text-decoration: none;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
