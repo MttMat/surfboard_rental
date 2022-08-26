@@ -1,25 +1,31 @@
 // Specific CSS for your home-page
-h1{
-  font-family: 'Edu TAS Beginner', cursive;
-}
 
 .banner {
-  padding-top: 100px;
-  padding-left: 25px;
+  display: flex;
   height: 500px;
   font-family: 'Open Sans', sans-serif;
   color: white;
   background-image: url(https://images.unsplash.com/photo-1621433213916-fde39d28e016?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
   background-size: contain;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2 {
-  text-align: center;
+.h1 {
+  font-family: 'Edu TAS Beginner', cursive;
+  margin-top: 145px;
+}
+
+.h2 {
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 24px;
 }
+
 .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -41,10 +47,6 @@ div {
   color: #01041D;
   font-weight: lighter;
   background-size: cover;
-  // height: 150px;
-  // border-radius: 1px;
-  // box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-  // text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 }
 
 .cards-container .cards {
@@ -56,7 +58,17 @@ img {
   size: 100px;
 }
 
-.btn {
+.button {
   background-color: #28587B;
   border-radius: 50px;
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
   }
+
+.button:hover {
+  background-color: #1c3749;
+  color: white;
+}
