@@ -1,15 +1,17 @@
 <div class="container">
   <h1 class = "detail-h1">Your Requests</h1>
   <div class="dashboard-content">
-    <div class="">
+    <div class="profile">
+    <div>
       <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="img-profile" alt="">
-        <br>
-        <h3 class = "detail-h3">Alexander Hipp</h3>
-        <button class="btn-dashboard">Edit Profile</button>
-        <br>
-        <button class="btn-dashboard">Past Booking</button>
     </div>
-    <div class="request-cards">
+    <div>
+      <div class="mt-3"><h3 class = "detail-h3">Alexander Hipp</h3></div>
+      <div><button class="btn-dashboard">Edit Profile</button></div>
+      <div><button class="btn-dashboard">Past Booking</button></div>
+    </div>
+    </div>
+    <%# <div class="request-cards"> %>
       <div class="cards-dashboard">
         <% @rentals.each do |rental| %>
           <%= link_to surfboard_path(rental.surfboard) do %>
@@ -23,7 +25,7 @@
             </div>
           <% end %>
         <% end %>
-      </div>
+      <%# </div> %>
     </div>
   </div>
 </div>
