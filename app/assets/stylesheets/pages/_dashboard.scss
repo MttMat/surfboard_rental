@@ -1,3 +1,4 @@
+
 .detail-h1 {
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
@@ -8,9 +9,8 @@
 
 .detail-h3 {
   font-size: 20px;
-  text-align: left;
+  text-align: center;
   padding-top: 5px;
-  margin-left: 75px;
 }
 
 .detail-p {
@@ -22,27 +22,29 @@
   padding: 3px;
 }
 
-button {
+.btn-dashboard {
   border-radius: 50px;
+  width: 200px;
   color: rgb(231, 234, 239);
   background-color: #28587B;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border: #28587B;
+  margin-top: 20px;
   font-size: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 75px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .img-profile {
-  padding: -0.75rem;
   background-color: #F4F4F4;
   border: 1px solid var(--bs-border-color);
   border-radius: 100%;
   width: 200px;
   height: 200px;
-  margin-left: 50px;
 }
 
 .img-booking {
@@ -50,16 +52,22 @@ button {
   height: 10%;
 }
 
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-product {
+  justify-content: space-between;
+  // width: 600px;
+  height: 100px;
   overflow: hidden;
-  height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   display: flex;
   align-items: center;
-  margin-top: 10px;
   align-content: center;
-  margin-right: 250px;
+  margin-bottom: 20px;
 }
 
 .card-product img {

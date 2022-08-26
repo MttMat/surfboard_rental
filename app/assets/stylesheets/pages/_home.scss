@@ -18,12 +18,9 @@
   margin-top: 145px;
 }
 
-.h2 {
+.home-h2 {
   margin-bottom: 30px;
-}
-
-h3 {
-  font-size: 24px;
+  margin-top: 30px;
 }
 
 .cards-container {
@@ -58,7 +55,7 @@ img {
   size: 100px;
 }
 
-.button {
+.button-explore {
   background-color: #28587B;
   border-radius: 50px;
   width: 200px;
@@ -68,7 +65,7 @@ img {
   color: white;
   }
 
-.button:hover {
+.button-explore:hover {
   background-color: #1c3749;
   color: white;
 }
