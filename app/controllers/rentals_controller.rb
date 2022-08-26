@@ -11,6 +11,10 @@ class RentalsController < ApplicationController
     end
   end
 
+  def accept_status
+
+  end
+
   private
 
   def rental_params
